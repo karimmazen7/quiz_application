@@ -77,18 +77,20 @@ class _HomePageState extends State<HomePage> {
                         //       ),
                         //     )
                         //     .toList(),
-                        children: List.generate(questions[questionIndex].availableAnswers.length, (index)=> AnswerItem(
-                          answerMap: questions[questionIndex].availableAnswers[index],
+                        children: List.generate(
+                          questions[questionIndex].availableAnswers.length,
+                          (index) => AnswerItem(
+                            answerMap: questions[questionIndex]
+                                .availableAnswers[index],
                             isAnswerSelected: answerChoosen == index,
-                          questionIndexChangeCallback:(){
-                            setState(() {
-                              answerChoosen = index;
-                            });
-                          },
+                            questionIndexChangeCallback: () {
+                              setState(() {
+                                answerChoosen = index;
+                              });
+                            },
+                          ),
                         ),
-                      
                       ),
-                    ),
                       const Spacer(),
                       SizedBox(
                         width: double.infinity,

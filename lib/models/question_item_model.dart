@@ -10,7 +10,8 @@ class QuestionItemModel {
 List <QuestionItemModel> questions = [
   QuestionItemModel(
     title: 'What is your favorite sport?',
-    availableAnswers: [AnswerItemModel(
+    availableAnswers: [
+      AnswerItemModel(
     title: 'Football',
     onPressed: () {
       debugPrint('Football button clicked');
